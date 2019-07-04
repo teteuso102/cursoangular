@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from 'angularfire2/firestore';
 
 import { Task } from './models/task.model';
-import { Observable } from 'rxjs/internal/Observable';
+import { Observable } from 'rxjs/Observable';
 
 
 

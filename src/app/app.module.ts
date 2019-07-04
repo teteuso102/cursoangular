@@ -3,7 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { MatToolbarModule } from '@angular/material';
+import {
+  MatToolbarModule,
+  MatListModule,
+  MatLineModule,
+  MatSlideToggleModule
+} from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +26,9 @@ import { TaskListComponent } from './task-list/task-list.component';
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    MatLineModule,
+    MatListModule,
+    MatSlideToggleModule,
     MatToolbarModule
 
   ],
