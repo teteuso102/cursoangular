@@ -1,0 +1,23 @@
+<h1 mat-dialog title>{{ dialogTitle }}</h1>
+<mat-dialog-content>
+  <mat-form-field>
+    <input
+     type="text"
+     placeholder="Titulo"
+      matInput
+     [(ngModel)]="task.title"
+     (keyup.enter)="onSave()"
+     required
+     minlength="3"
+     #titleControl="ngModel">
+  </mat-form-field>
+
+</mat-dialog-content>
+
+
+<mat-dialog-actions>
+    <button mat-button [disabled]="titleControl.invalid" (click)="onSave()">Salvar</button>
+  <button mat-button mat-dialog-close>Cancelar</button>
+
+</mat-dialog-actions>
+

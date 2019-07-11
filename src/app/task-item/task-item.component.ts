@@ -19,3 +19,5 @@ export class TaskItemComponent {
    this[action].emit(this.task);
   }
 }
+
+
