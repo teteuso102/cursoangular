@@ -9,7 +9,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
   styleUrls: ['./task-dialog.component.scss']
 })
 export class TaskDialogComponent implements OnInit {
-  dialogTitle = 'Nova Tarefa';
+  dialogTitle = 'Novo Produto ';
  task: Task = {title: ''};
 
   constructor(

@@ -15,7 +15,7 @@ import {
   MatFormFieldModule,
   MatInputModule,
   MatMenuModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule, MatSidenavModule, MatNativeDateModule
 } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -24,19 +24,27 @@ import { environment } from 'src/environments/environment';
 import { TaskItemComponent } from './task-item/task-item.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { TaskDialogComponent } from './task-dialog/task-dialog.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserModule } from '@angular/platform-browser';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskItemComponent,
     TaskListComponent,
-    TaskDialogComponent
+    TaskDialogComponent,
+    MainNavComponent
+
   ],
   entryComponents: [
     TaskDialogComponent
   ],
   imports: [
+    BrowserModule,
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule.enablePersistence(),
@@ -49,9 +57,14 @@ import { FormsModule } from '@angular/forms';
     MatLineModule,
     MatListModule,
     MatMenuModule,
+    HttpClientModule,
     MatProgressSpinnerModule,
     MatSlideToggleModule,
-    MatToolbarModule
+    MatToolbarModule,
+    LayoutModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+    MatSidenavModule
 
   ],
   providers: [
